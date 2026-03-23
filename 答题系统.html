@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学答题系统 | TypeScript版</title>
+    <!-- 引入CSS样式文件 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 页面标题 -->
+        <div class="header">
+            <h1>数学智能答题系统</h1>
+            <p>选择题型，挑战10道随机数学题，检验你的计算能力！</p>
+        </div>
+
+        <!-- 题型设置区域 -->
+        <div class="settings">
+            <h2>答题设置</h2>
+            <div class="type-selector">
+                <div class="type-option">
+                    <label for="math-type">题目类型</label>
+                    <select id="math-type">
+                        <option value="" disabled selected hidden>请选择题目类型</option>
+                        <option value="add10">10以内加法</option>
+                        <option value="sub10">10以内减法</option>
+                        <option value="add100">100以内加法</option>
+                        <option value="sub100">100以内减法</option>
+                        <option value="mul100">100以内乘法</option>
+                        <option value="div100">100以内除法（整除）</option>
+                    </select>
+                </div>
+            </div>
+            <button class="start-btn" id="start-btn" disabled>开始答题</button>
+        </div>
+
+        <!-- 答题区域 -->
+        <div class="quiz-container" id="quiz-container">
+            <div id="questions"></div>
+            <button class="submit-btn" id="submit-btn">提交答案</button>
+        </div>
+
+        <!-- 结果展示区域 -->
+        <div class="result-container" id="result-container">
+            <h2>答题结果</h2>
+            <div class="score" id="score">0/10</div>
+            <div class="feedback" id="feedback">继续加油！</div>
+            <button class="restart-btn" id="restart-btn">重新答题</button>
+        </div>
+    </div>
+
+    <!-- 引入编译后的JavaScript文件 -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
